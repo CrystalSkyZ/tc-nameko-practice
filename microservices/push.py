@@ -25,7 +25,7 @@ class PushService(object):
     def push(self, u_id, content):
         user_data = self.register_rpc.check_registered(u_id)
         if not user_data:
-        print("User:{} not existed.".format(u_id))
+            print("User:{} not existed.".format(u_id))
             return False, "not registered."
         language, country = user_data["language"], user_data["country"]
 
